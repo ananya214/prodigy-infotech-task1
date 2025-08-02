@@ -66,40 +66,6 @@ if (mainSection && window.location.pathname.includes("menu.html")) {
   mainSection.style.backgroundColor = "#d0e3c4";
 }
 
-if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-
-  gsap.utils.toArray(".reveal-up-left").forEach((item, index) => {
-    gsap.from(item, {
-      x: -50,
-      opacity: 0,
-      duration: 0.4, // faster animation
-      delay: index * 0.1, // less delay between items
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: item,
-        start: "top 95%", // triggers earlier (almost as soon as it enters viewport)
-        toggleActions: "play none none reverse",
-      },
-    });
-  });
-
-  gsap.utils.toArray(".reveal-up-right").forEach((item, index) => {
-    gsap.from(item, {
-      x: 50,
-      opacity: 0,
-      duration: 0.4,
-      delay: index * 0.1,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: item,
-        start: "top 95%",
-        toggleActions: "play none none reverse",
-      },
-    });
-  });
-}
-
 document.querySelectorAll(".count").forEach((countEl) => {
   let triggered = false;
   ScrollTrigger.create({
