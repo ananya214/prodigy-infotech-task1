@@ -1247,14 +1247,18 @@ h6,
 .faq-cta {
   margin-top: 80px;
   background-color: #e5f9e0;
-  padding: 60px 24px;
+  padding: 60px 24px 80px 24px; /* Added bottom padding */
   text-align: center;
   border-radius: 40px;
   color: #184d2b;
 }
 
+.faq-cta p {
+  margin-bottom: 32px; /* Add this if you have a <p> element */
+}
+
 .faq-cta .btn {
-  margin-top: 16px;
+  margin-top: 0; /* Already spaced by margin-bottom on text */
   background-color: #184d2b;
   color: #fff;
   padding: 12px 28px;
@@ -1262,6 +1266,7 @@ h6,
   font-size: 1rem;
   text-decoration: none;
 }
+
 .faq-cta .btn:hover {
   background-color: #143a21;
 }
